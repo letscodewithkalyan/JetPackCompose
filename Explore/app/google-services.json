@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "418056971464",
+    "project_id": "test-db955",
+    "storage_bucket": "test-db955.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:418056971464:android:78948db83b5cca9736b1fd",
+        "android_client_info": {
+          "package_name": "com.kp.explore"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRpHxACB_CU7hCuWUXmARa9b2ole0m_lQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
