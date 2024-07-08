@@ -39,10 +39,6 @@ android {
     kapt {
         correctErrorTypes = true
     }
-
-    buildFeatures{
-        viewBinding = true
-    }
 }
 
 dependencies {
@@ -70,4 +66,19 @@ dependencies {
     //Creating ViewModel
     val activity_version = "1.9.0"
     implementation("androidx.activity:activity-ktx:$activity_version")
+
+    //Picasso
+    implementation("com.squareup.picasso:picasso:2.8")
+
+    //Coroutines-Unitest
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.8.1")
+
+    //Mockito Unit test
+    testImplementation("org.mockito:mockito-core:3.6.0")
+    testImplementation("com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0")
+    //In cases any issues in mocking the serailization
+    //https://stackoverflow.com/questions/65647528/mockito-cannot-mock-this-class
+    testImplementation("org.mockito:mockito-inline:5.2.0")
+
+    testImplementation("androidx.arch.core:core-testing:2.2.0")
 }
