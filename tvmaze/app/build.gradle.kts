@@ -39,6 +39,15 @@ android {
     kapt {
         correctErrorTypes = true
     }
+
+    sourceSets{
+        getByName("test") {
+            java.srcDirs("src/test/java", "src/sharedTest/java")
+        }
+        getByName("androidTest") {
+            java.srcDirs("src/androidTest/java", "src/sharedTest/java")
+        }
+    }
 }
 
 dependencies {
@@ -81,4 +90,7 @@ dependencies {
     testImplementation("org.mockito:mockito-inline:5.2.0")
 
     testImplementation("androidx.arch.core:core-testing:2.2.0")
+
+    //Retrofit unittesting
+    testImplementation("com.squareup.okhttp3:mockwebserver:4.12.0")
 }
