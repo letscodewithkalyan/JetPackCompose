@@ -17,15 +17,12 @@ import org.mockito.MockitoAnnotations
 import retrofit2.Response
 
 class ScheduleRepositoryTest {
-
     @Mock
     lateinit var scheduleApi: ScheduleApi
-
     @Before
     fun setUp() {
         MockitoAnnotations.openMocks(this)
     }
-
     @Test
     fun test_getScheduleList_successEmptyList() = runTest {
         //Arrange
