@@ -16,6 +16,9 @@
         android:theme="@style/Theme.Tvmaze"
         tools:targetApi="31">
         <activity
+            android:name=".views.DBActivity"
+            android:exported="false" />
+        <activity
             android:name=".views.QuoteActivity"
             android:exported="false" />
         <activity

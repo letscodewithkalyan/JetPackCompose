@@ -12,6 +12,15 @@
         android:layout_margin="8dp"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toTopOf="@id/navigateButton"/>
+
+    <Button
+        android:id="@+id/dbButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/navigateButton"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="DB button"/>
+
     <Button
         android:id="@+id/navigateButton"
         android:layout_width="match_parent"

@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.kp.tvmaze.data.NetworkResponse
 import com.kp.tvmaze.viewmodels.MainViewModel
+import com.kp.tvmaze.views.DBActivity
 import com.kp.tvmaze.views.QuoteActivity
 import com.kp.tvmaze.views.adapters.ScheduleAdapter
 import dagger.hilt.android.AndroidEntryPoint
@@ -31,9 +32,15 @@ class MainActivity : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
         scheduleAdapter = ScheduleAdapter()
         recyclerView.adapter = scheduleAdapter
+
         navigateButton = findViewById(R.id.navigateButton)
         navigateButton.setOnClickListener {
             startActivity(Intent(this, QuoteActivity::class.java))
+        }
+
+        var dbButton = findViewById<Button>(R.id.dbButton)
+        dbButton.setOnClickListener {
+            startActivity(Intent(this, DBActivity::class.java))
         }
         bindObservers()
     }
