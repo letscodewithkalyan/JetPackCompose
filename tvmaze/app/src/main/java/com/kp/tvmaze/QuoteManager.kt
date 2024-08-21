@@ -14,5 +14,6 @@ class QuoteManager @Inject constructor(@ApplicationContext private val context: 
         inputStream.read(buffer)
         inputStream.close()
         return Gson().fromJson(String(buffer, Charsets.UTF_8), Array<Quote>::class.java)
+
     }
 }
