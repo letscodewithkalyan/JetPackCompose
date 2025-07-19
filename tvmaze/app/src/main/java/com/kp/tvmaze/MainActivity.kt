@@ -3,6 +3,7 @@ package com.kp.tvmaze
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import androidx.activity.viewModels
 import androidx.lifecycle.Lifecycle
@@ -43,6 +44,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, DBActivity::class.java))
         }
         bindObservers()
+        doSomething(lastName = "Test", firstName = "Kalyan");
     }
 
     fun bindObservers() {
@@ -61,5 +63,9 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+    }
+
+    fun doSomething(firstName: String, lastName: String){
+
     }
 }
