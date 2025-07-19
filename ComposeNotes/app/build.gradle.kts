@@ -2,8 +2,8 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.hilt)
     alias(libs.plugins.ksp)
-    alias(libs.plugins.hilt) // Assuming you named it correctly
 }
 
 android {
@@ -50,7 +50,8 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
-    implementation(libs.hilt.android)
+    implementation(libs.androidx.navigation.runtime.android)
+
     // Room
     val room_version = "2.7.1"
     implementation("androidx.room:room-runtime:$room_version")
@@ -58,9 +59,9 @@ dependencies {
     ksp("androidx.room:room-compiler:$room_version")
 
     // Hilt
-//    implementation("com.google.dagger:hilt-android:2.56.2")
-//    ksp("com.google.dagger:hilt-compiler:2.56.2")
-    implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
+    implementation(libs.hilt.android)
+    implementation(libs.hilt.navigation.compose)
+    ksp(libs.hilt.compiler)
 
     // Coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")

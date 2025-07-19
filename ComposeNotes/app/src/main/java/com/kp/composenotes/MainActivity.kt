@@ -13,6 +13,7 @@ import com.kp.composenotes.presentation.navigation.Navigation
 import com.kp.composenotes.ui.theme.ComposeNotesTheme
 import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
